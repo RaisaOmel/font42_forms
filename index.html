@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h2>
+            Заполните форму для связи:
+        </h2>
+        <form action="send.html" name="myForm" method="GET" novalidate>
+            <fieldset>
+                <legend> авторизация </legend>
+                <label>
+                    <p>Ваше имя</p>
+                    <input type="text" name="myFormName" size="20" maxlength="25" placeholder="например Вася">
+                </label>
+                
+                <label for="myFormPhone">
+                    <p>телефон для связи</p>
+                </label>
+                <input type="text" name="myFormPhone" id="myFormPhone" value="1234567" required>
+                <input type="submit" value="Перезвонить мне">
+                <input type="reset">
+                <input type="image" src="img/button1.png">
+                <input type="button" value="для js">
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend> Курите? </legend>
+                <p>выберите один вариант. </p>
+                <label>
+                    да - <input type="radio" name="myformSmocking" value="да">
+                </label>
+                <label>
+                    нет - <input type="radio" name="myformSmocking" value="нет" checked>
+                </label>
+                <label>
+                    иногда - <input type="radio" name="myformSmocking" value="иногда">
+                </label>
+                <label>
+                    если много выпью - <input type="radio" name="myformSmocking" value="когда выпью">
+                </label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend> какие газеты читаете </legend>
+                <p>можно выбрать несколько вариантов </p>
+                <label>
+                    гомельская правда - <input type="checkbox" name="myformPress_GP" value="GP">
+                </label>
+                <label>
+                    аргументы и факты - <input type="checkbox" name="myformPress_AF" value="AF">
+                </label>
+                <label>
+                    юность - <input type="checkbox" name="myform_U" value="U">
+                </label>
+                <label>
+                    никакие - <input type="checkbox" name="myform_Not" value="not" checked>
+                </label>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend> сколько часов в сутках вы спите? </legend>
+                <p>элемент выборки в форме / ctrl -множественный выбор / shift- диапазон</p>
+                <select name="myFormSleep" size="4" multiple>
+                    <option value="0" selected>менее 3х часов</option>
+                    <option value="1">3-5 часа</option>
+                    <option value="2">6-8 часов</option>
+                    <option value="3">более 8 часов</option>
+                </select>
+            </fieldset>
+            <hr>
+            <p>выбор подсказки из вариантов</p>
+            <input name="city" list="cities" />
+            <datalist id="cities">
+                <option value="Naples" />
+                <option value="London" />
+                <option value="Berlin" />
+                <option value="New York" />
+                <option value="Frattamaggiore" />
+            </datalist>
+            <hr>
+            <p>оставьте отзыв</p>
+            <textarea name="myFormArea" cols="100" rows="20"></textarea>
+            <hr>
+        </form>
+    </div>
+</body>
+</html>
